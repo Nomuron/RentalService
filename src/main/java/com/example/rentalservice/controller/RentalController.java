@@ -15,6 +15,11 @@ public class RentalController {
         this.rentalService = rentalService;
     }
 
+    @GetMapping
+    public ResponseEntity<Movie> getMovie() {
+        return ResponseEntity.ok(rentalService.getMovies());
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Movie> getMovie(@PathVariable Long id) {
         return ResponseEntity.ok(rentalService.getMovie(id));

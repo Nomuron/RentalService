@@ -15,6 +15,11 @@ public class RentalService {
         this.restTemplate = restTemplate;
     }
 
+    public Movie getMovies() {
+        Movie movie = restTemplate.getForEntity("http://localhost:8080/movies/", Movie.class).getBody();
+        return movie;
+    }
+
     public Movie getMovie(Long id) {
         Movie movie = restTemplate.getForEntity("http://localhost:8080/movies/" + id, Movie.class).getBody();
         return movie;
@@ -24,7 +29,8 @@ public class RentalService {
         Movie movie = restTemplate.exchange("http://localhost:8080/movies/" + id + "/true", HttpMethod.PUT, null, Movie.class).getBody();
         return movie;
     }
-        public Movie rentMovie(Long id) {
+
+    public Movie rentMovie(Long id) {
         Movie movie = restTemplate.exchange("http://localhost:8080/movies/" + id + "/false", HttpMethod.PUT, null, Movie.class).getBody();
         return movie;
     }
