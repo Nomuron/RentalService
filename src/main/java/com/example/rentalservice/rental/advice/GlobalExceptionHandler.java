@@ -1,4 +1,4 @@
-package com.example.rentalservice.advice;
+package com.example.rentalservice.rental.advice;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

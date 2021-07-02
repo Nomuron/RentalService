@@ -1,4 +1,4 @@
-package com.example.rentalservice;
+package com.example.rentalservice.rental.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

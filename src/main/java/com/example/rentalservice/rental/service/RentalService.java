@@ -1,8 +1,7 @@
-package com.example.rentalservice.service;
+package com.example.rentalservice.rental.service;
 
-import com.example.rentalservice.model.Movie;
+import com.example.rentalservice.rental.model.Movie;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
